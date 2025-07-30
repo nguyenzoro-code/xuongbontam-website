@@ -1,0 +1,18 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "images/uploads" # Thư mục lưu ảnh mới tải lên
+public_folder: "/images/uploads"
+
+collections:
+  - name: "posts"
+    label: "Bài viết Tin tức"
+    folder: "tin-tuc"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Layout", name: "layout", widget: "hidden", default: "post.njk"}
+      - {label: "Tiêu đề", name: "title", widget: "string"}
+      - {label: "Mô tả (SEO)", name: "description", widget: "text"}
+      - {label: "Nội dung bài viết", name: "body", widget: "markdown"}
