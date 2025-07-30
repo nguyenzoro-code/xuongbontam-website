@@ -1,15 +1,15 @@
 ---
 layout: post.njk
 title: Quy trình sản xuất bồn tắm acrylic | Xưởng Bồn Tắm
-description: Khám phá chi tiết 8 bước trong quy trình sản xuất bồn tắm acrylic tại xưởng, từ khâu chọn nguyên liệu đến kiểm tra chất lượng (QC) cuối cùng.
+description: Khám phá chi tiết 8 bước trong quy trình sản xuất bồn tắm acrylic
+  tại xưởng, từ khâu chọn nguyên liệu đến kiểm tra chất lượng (QC) cuối cùng.
 ---
-
 <div class="page-post">
 <main class="post-container">
     <article>
         <header class="post-header">
             <h1 class="post-title">Quy trình sản xuất bồn tắm acrylic</h1>
-            <p class="post-subtitle">Khám phá từng công đoạn sản xuất bồn tắm chất lượng cao tại Việt Nam.</p>
+            <p class="post-subtitle">Khám phá từng công đoạn sản xuất bồn tắm chất lượng cao tại [Xưởng bồn tắm Acrylic](https://xuongbontam.com/) tại Việt Nam.</p>
         </header>
         <!-- ===== SECTION GIỚI THIỆU MỚI ===== -->
         <section class="post-intro">
