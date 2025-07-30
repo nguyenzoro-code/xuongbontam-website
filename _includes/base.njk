@@ -42,6 +42,23 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 
     <!-- File JS chính của bạn -->
+      <!-- ... (các thẻ script cũ) ... -->
     <script src="{{ '/js/scripts.js' | url }}"></script>
+
+    <!-- ======================================================= -->
+    <!-- BỔ SUNG SCRIPT KÍCH HOẠT NETLIFY IDENTITY -->
+    <!-- ======================================================= -->
+    <script>
+      if (window.netlifyIdentity) {
+        window.netlifyIdentity.on("init", user => {
+          if (!user) {
+            window.netlifyIdentity.on("login", () => {
+              document.location.href = "/admin/";
+            });
+          }
+        });
+      }
+    </script>
+
 </body>
 </html>
