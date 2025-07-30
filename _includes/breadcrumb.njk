@@ -1,0 +1,20 @@
+{# breadcrumb.njk - Phiên bản đã sửa lỗi cú pháp arrow function #}
+{% set pathParts = page.url.split('/') | reject("equalto", "") %}
+
+<nav class="breadcrumb" aria-label="breadcrumb">
+    <ol>
+        <li><a href="{{ '/' | url }}">Trang chủ</a></li>
+
+        {%- set currentPath = '/' -%}
+        {%- for part in pathParts -%}
+            {%- set currentPath = currentPath + part + '/' -%}
+            
+            {%- if loop.last -%}
+                <li aria-current="page">{{ title }}</li>
+            {%- else -%}
+                {%- set partTitle = breadcrumbs[currentPath] or part | replace('-', ' ') | capitalize -%}
+                <li><a href="{{ currentPath | url }}">{{ partTitle }}</a></li>
+            {%- endif -%}
+        {%- endfor -%}
+    </ol>
+</nav>

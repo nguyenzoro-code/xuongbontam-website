@@ -1,0 +1,33 @@
+# Bật công cụ Rewrite
+<IfModule mod_rewrite.c>
+RewriteEngine On
+
+# =================================================================
+# QUY TẮC 1: CHUYỂN HƯỚNG 301 CÁC LINK CỤ THỂ (ƯU TIÊN CAO NHẤT)
+# =================================================================
+
+# Chuyển hướng từ /quy-trinh-san-xuat-bon-tam-acrylic.html sang URL mới
+RewriteRule ^quy-trinh-san-xuat-bon-tam-acrylic\.html$ /tin-tuc/quy-trinh-san-xuat-bon-tam-acrylic/ [R=301,L]
+
+# BẠN CÓ THỂ THÊM CÁC QUY TẮC CHUYỂN HƯỚNG KHÁC Ở ĐÂY
+# Ví dụ: RewriteRule ^san-pham-cu\.html$ /san-pham-moi/ [R=301,L]
+
+
+# =================================================================
+# QUY TẮC 2: QUY TẮC CHUNG (Xử lý các URL không tồn tại khác)
+# =================================================================
+# # Điều kiện 1: Nếu URL được yêu cầu KHÔNG phải là một file có thật
+# RewriteCond %{REQUEST_FILENAME} !-f
+# # Điều kiện 2: VÀ nếu URL được yêu cầu KHÔNG phải là một thư mục có thật
+# RewriteCond %{REQUEST_FILENAME} !-d
+# # Quy tắc: Chuyển hướng các URL không tồn tại về trang chủ
+# RewriteRule ^(.*)$ https://xuongbontam.com/ [R=301,L]
+
+</IfModule>
+
+# =================================================================
+# QUY TẮC 3: XỬ LÝ LỖI 404 (FALLBACK)
+# =================================================================
+# Nếu không có quy tắc nào ở trên khớp, hiển thị trang 404 tùy chỉnh
+# (Hiện tại đang trỏ về trang chủ)
+ErrorDocument 404 https://xuongbontam.com/
